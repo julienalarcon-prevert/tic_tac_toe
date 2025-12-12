@@ -1,0 +1,155 @@
+:root {
+    --bg: #f2f4f7;
+    --card: #f2f4f7;
+    --primary: #3e87fc;
+    --text-dark: #1f2937;
+    --text-light: #293b56;
+    --radius: 14px;
+    --shadow: 0 4px 10px rgba(0,0,0,0.07);
+    
+}
+
+/* RESET */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    font-family: 'Inter', Arial, sans-serif; 
+    color: var(--text-dark);
+}
+
+header {
+    background: #718edd; 
+    padding: 20px 0; 
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px; 
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    height: 50px; 
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+    
+}
+
+header h1 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px; 
+}
+
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+}
+
+.section-container {
+    margin-bottom: 0; 
+}
+
+
+/* TITLE STYLE  */
+.section-title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    display: inline-block;
+    background-color: #e0e2e7; 
+    color: var(--primary);
+    padding: 5px 20px;
+    border-radius: 9999px; 
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+section.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow); 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Optimisation de la transition */
+    
+}
+
+section.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+section.card p {
+    margin: 10px 0;
+    color: var(--text-dark);
+    font-size: 14px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
+}
+
+section.card p:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px 20px;
+    color: #0e0e0e;
+    background-color: #718edd; 
+    border-top: 1px solid #eee;
+}
+footer p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+footer p:first-child {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* --- RESPONSIVE LITTEL SCREEN --- */
+@media (max-width: 768px) {
+    .data-grid {
+        grid-template-columns: 1fr;
+        gap: 20px; 
+    }
+    
+    main {
+        margin: 15px auto;
+        padding: 0 10px; 
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 0 10px; 
+    }
+}
